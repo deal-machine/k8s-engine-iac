@@ -21,9 +21,9 @@ module "cluster" {
   subnetwork_link = module.vpc.subnetwork_link
   project_id      = var.project_id
   zone            = var.zone
-  cluster_name = var.cluster_name
-  machine_type = var.machine_type
-  image_type = var.image_type
-  disk_size_gb = var.disk_size_gb
-  disk_type = var.disk_type
+  cluster_name    = var.cluster_name
+  machine_type    = var.machine_type
+  image_type      = var.image_type
+  disk_size_gb    = var.disk_size_gb
+  disk_type       = var.disk_type
 }

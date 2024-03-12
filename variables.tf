@@ -1,10 +1,9 @@
 variable "project_id" {}
-variable "credentials" {}
 variable "zone" {}
 variable "region" {}
 
 variable "cluster_name" {
-    default = "main" 
+  default = "main"
 }
 
 variable "machine_type" {
