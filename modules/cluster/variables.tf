@@ -2,3 +2,8 @@ variable "project_id" {}
 variable "zone" {}
 variable "network_link" {}
 variable "subnetwork_link" {}
+variable "cluster_name" {}
+variable "machine_type" {}
+variable "image_type" {}
+variable "disk_size_gb" {}
+variable "disk_type" {}

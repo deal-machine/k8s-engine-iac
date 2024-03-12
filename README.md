@@ -40,6 +40,11 @@
     - JSON file with credentials
   - zone
   - region
+  - cluster_name
+  - machine_type
+  - image_type
+  - disk_size_gb
+  - disk_type
 
 ## Outputs
 

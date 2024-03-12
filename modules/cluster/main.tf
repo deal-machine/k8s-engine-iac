@@ -1,5 +1,5 @@
 resource "google_container_cluster" "primary" {
-  name                     = "primary"
+  name                     = var.cluster_name
   location                 = var.zone
   deletion_protection      = false
   initial_node_count       = 1
@@ -10,16 +10,16 @@ resource "google_container_cluster" "primary" {
 }
 
 resource "google_container_node_pool" "primary_nodes" {
-  name       = "primary-node-pool"
+  name       = "${var.cluster_name}-node-pool"
   location   = var.zone
   cluster    = google_container_cluster.primary.name
   node_count = 1
   node_config {
     # preemptible  = true
-    machine_type = "e2-small"
-    image_type   = "cos_containerd"
-    disk_size_gb = 60
-    disk_type    = "pd-balanced"
+    machine_type = var.machine_type
+    image_type   = var.image_type
+    disk_size_gb = var.disk_size_gb
+    disk_type    = var.disk_type
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
