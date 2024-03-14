@@ -35,9 +35,6 @@
 ## Inputs
 
   - project_id
-    - The Project Id
-  - credentials
-    - JSON file with credentials
   - zone
   - region
   - cluster_name
